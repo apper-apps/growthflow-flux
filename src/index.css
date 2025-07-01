@@ -1,0 +1,58 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #F5F7FA;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-card {
+    @apply bg-gradient-to-br from-white via-white to-purple-50/30 border border-gray-200/60 shadow-lg shadow-purple-500/5;
+  }
+  
+  .gradient-button {
+    @apply bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white font-medium rounded-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-primary-500/25;
+  }
+  
+  .metric-card {
+    @apply bg-gradient-to-br from-white to-gray-50/50 border border-gray-200/60 rounded-xl p-6 shadow-lg shadow-gray-500/5 hover:shadow-xl hover:shadow-gray-500/10 transition-all duration-200;
+  }
+  
+  .activity-dot {
+    @apply w-2 h-2 rounded-full absolute left-1 top-2 transform -translate-x-1/2;
+  }
+}
+
+/* Toast Overrides */
+.Toastify__toast-container {
+  @apply font-body;
+}
+
+.Toastify__toast {
+  @apply rounded-lg shadow-xl;
+}
+
+.Toastify__toast--success {
+  @apply bg-gradient-to-r from-green-500 to-green-600;
+}
+
+.Toastify__toast--error {
+  @apply bg-gradient-to-r from-red-500 to-red-600;
+}
+
+.Toastify__toast--info {
+  @apply bg-gradient-to-r from-blue-500 to-blue-600;
+}
+
+.Toastify__toast--warning {
+  @apply bg-gradient-to-r from-orange-500 to-orange-600;
+}
